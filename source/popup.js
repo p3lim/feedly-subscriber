@@ -8,12 +8,17 @@ var onClick = function(event){
 
 document.addEventListener('DOMContentLoaded', function(){
 	chrome.tabs.query({
-		active: true
+		currentWindow: true
 	}, function(tabs){
-		var tab = tabs[0];
+		var currentTab;
+		for(var index = 0; index < tabs.length; index++){
+			if(tabs[index].selected){
+				currentTab = tabs[index];
+			}
+		}
 
 		chrome.runtime.getBackgroundPage(function(page){
-			var feeds = page.feeds[tab.id];
+			var feeds = page.feeds[currentTab.id];
 			if(feeds.length === 1){
 				openFeedly(feeds[0].href);
 			} else {
