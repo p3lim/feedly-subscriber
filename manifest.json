@@ -16,7 +16,6 @@
 	}],
 	"page_action": {
 		"default_icon": "images/icon48.png",
-		"default_title": "Add to Feedly",
 		"default_popup": "popup.html"
 	},
 	"background": {
