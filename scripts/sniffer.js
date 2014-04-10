@@ -6,9 +6,7 @@ var item, count = 0, feeds = [];
 while(item = result.iterateNext()){
 	feeds.push({'href': item.href, 'title': item.title});
 	count++;
-}
+};
 
-if(count > 0){
-	console.log('Found ' + count + ' feeds!');
+if(count > 0)
 	chrome.runtime.sendMessage(feeds);
-}
