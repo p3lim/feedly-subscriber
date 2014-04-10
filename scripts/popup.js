@@ -8,16 +8,11 @@ var onClick = function(event){
 
 document.addEventListener('DOMContentLoaded', function(){
 	chrome.tabs.query({
-		currentWindow: true
+		currentWindow: true,
+		active: true
 	}, function(tabs){
-		var currentTab;
-		for(var index = 0; index < tabs.length; index++){
-			if(tabs[index].selected)
-				currentTab = tabs[index];
-		};
-
 		chrome.runtime.getBackgroundPage(function(page){
-			var feeds = page.feeds[currentTab.id];
+			var feeds = page.feeds[tabs[0].id];
 			if(feeds.length > 1){
 				var table = document.createElement('table');
 				for(var index = 0; index < feeds.length; index++){
@@ -26,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function(){
 					a.addEventListener('click', onClick);
 
 					var img = document.createElement('img');
-					img.src = tab.favIconUrl;
+					img.src = tabs[0].favIconUrl;
 
 					a.appendChild(img);
 					a.appendChild(document.createTextNode(feeds[index].title));
