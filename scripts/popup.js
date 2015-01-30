@@ -1,5 +1,5 @@
 var openFeedly = function(url){
-	chrome.tabs.create({url: 'http://feedly.com/i/subscription/feed/' + escape(url)});
+	chrome.tabs.create({url: 'https://feedly.com/i/subscription/feed/' + escape(url)});
 };
 
 var onClick = function(event){
