@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "Feedly Subscriber",
 	"description": "One-click subscribe with Feedly",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"icons": {
 		"128": "images/icon128.png",
 		"48": "images/icon48.png"
