@@ -10,5 +10,5 @@ I made this as a superior alternative to Google's
 
 You can install this extension directly from the
 Google Chrome webstore by clicking this banner:
-[<img src='https://developers.google.com/chrome/web-store/images/branding/ChromeWebStore_BadgeWBorder_v2_206x58.png'>](http://bit.ly/feedly-subscriber)
+[<img src='https://developer.chrome.com/webstore/images/ChromeWebStore_BadgeWBorder_v2_206x58.png'>](http://bit.ly/feedly-subscriber)
 
